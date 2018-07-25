@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 16:08:19 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/25 16:14:02 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,10 @@ float			fast_cos(float deg);
 /*
 ** Maps a value from one range to another
 */
-float					ft_fmapf(float n, float s1, float e1, float s2,
-																	float e2);
-long					ft_lmapl(long n, long s1, long e1, long s2, long e2);
-float					ft_lmapf(long n, long s1, long e1, float s2, float e2);
-long					ft_fmapl(float n, float s1, float e1, long s2, long e2);
+float			ft_fmapf(float n, float s1, float e1, float s2, float e2);
+long			ft_lmapl(long n, long s1, long e1, long s2, long e2);
+float			ft_lmapf(long n, long s1, long e1, float s2, float e2);
+long			ft_fmapl(float n, float s1, float e1, long s2, long e2);
 
 /*
 ** Matrix stuff
