@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 14:36:10 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/25 16:08:19 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,29 @@
 /*
 ** Your standard 2D point
 */
-typedef struct	s_v2d
+typedef struct	s_p2d
 {
 	float		x;
 	float		y;
-}				t_v2d;
+}				t_p2d;
 
 /*
 ** Your standard 3D point
 */
-typedef struct	s_v3d
+typedef struct	s_p3d
 {
 	float		x;
 	float		y;
 	float		z;
+}				t_p3d;
+
+/*
+** 3D point with direction (AKA a vector)
+*/
+typedef struct	s_v3d
+{
+	t_p3d		pos;
+	t_p3d		rot;
 }				t_v3d;
 
 /*
@@ -83,7 +92,19 @@ void			mat_mult(const t_mat m1, const t_mat m2, t_mat dest);
 /*
 ** Transforms a 3d point using a matrix
 */
-t_v3d			v3d_transform(const t_v3d src, const t_mat m);
+t_p3d			p3d_transform(const t_p3d src, const t_mat m);
+
+/*
+** Creates a matrix that translates/rotates by the negative position/angle
+** of the specified vector
+*/
+void			mat_from_v3d(t_mat mat_cam, const t_v3d src);
+
+/*
+** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
+*/
+t_p2d			p3d_project(float fov, t_p2d origin,
+											t_p3d p_world, const t_mat mat_cam);
 
 /*
 ** Applies a translation to a matrix
