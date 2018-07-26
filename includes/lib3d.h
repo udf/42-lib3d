@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 16:14:02 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/26 21:58:23 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,9 +101,10 @@ void			mat_from_v3d(t_mat mat_cam, const t_v3d src);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
+** Returns 1 if the point is visible, 0 otherwise
 */
-t_p2d			p3d_project(float fov, t_p2d origin,
-											t_p3d p_world, const t_mat mat_cam);
+int	p3d_project(t_p2d *p_raster, t_p2d r_size, t_p2d c_size, t_p3d p_world,
+					const t_mat mat_cam);
 
 /*
 ** Applies a translation to a matrix

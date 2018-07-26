@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_trig.c                                         :+:      :+:    :+:   */
+/*   fast_trig.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 13:10:55 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 14:25:20 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/26 19:15:09 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ float fast_sin(float deg)
 
 	if (cach.e[0] >= 900)
 		cach = gen_cache(sinf);
-	index = (size_t)ft_fmapl(ABS(fmodf(deg, 360.0)), 0, 359, 0, CACHTAY_SIZE-1);
+	index = (size_t)ft_fmapl(fmodf(ABS(deg), 360.0), 0, 359, 0, CACHTAY_SIZE-1);
 	return (cach.e[index]);
 }
 
@@ -46,6 +46,6 @@ float fast_cos(float deg)
 
 	if (cach.e[0] >= 900)
 		cach = gen_cache(cosf);
-	index = (size_t)ft_fmapl(ABS(fmodf(deg, 360.0)), 0, 359, 0, CACHTAY_SIZE-1);
+	index = (size_t)ft_fmapl(fmodf(ABS(deg), 360.0), 0, 359, 0, CACHTAY_SIZE-1);
 	return (cach.e[index]);
 }

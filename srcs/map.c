@@ -6,11 +6,9 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 13:40:40 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 14:33:58 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/26 15:39:52 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 float	ft_fmapf(float n, float s1, float e1, float s2, float e2)
 {
