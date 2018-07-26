@@ -6,12 +6,12 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/07/25 16:09:54 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/07/26 13:18:11 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = fast_trig \
-mat_copy mat_mult p3d_transform \
+mat_copy mat_mult \
 mat_set_identity mat_set_row \
 mat_translate mat_scale mat_rotate \
 mat_from_v3d p3d_transform
