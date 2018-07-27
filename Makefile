@@ -6,7 +6,7 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/07/26 18:57:30 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/07/27 10:01:19 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,6 @@ tests: $(TEST_BINS)
 
 $(TEST_BINS): $(NAME) $(TEST_SRCS)
 	mkdir -p ./tests/bin
-	gcc -I includes -o $@ $(@:tests/bin/%=tests/%.c) -L . -lft -lm
+	gcc -I includes -Ofast -o $@ $(@:tests/bin/%=tests/%.c) -L . -l3d -lm
 
 re: fclean all

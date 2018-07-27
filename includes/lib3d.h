@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/26 21:58:23 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/27 10:15:28 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,8 @@ typedef struct	s_v3d
 */
 typedef float	t_mat[4][4];
 
-/*
-** Cached and approximate versions of sin and cos that accept degrees
-*/
-# define CACHTAY_SIZE 360
-typedef struct	s_cachtay
-{
-	float		e[CACHTAY_SIZE];
-}				t_cachtay;
-float			fast_sin(float deg);
-float			fast_cos(float deg);
+float			sin_deg(float deg);
+float			cos_deg(float deg);
 
 /*
 ** Maps a value from one range to another

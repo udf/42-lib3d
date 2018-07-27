@@ -6,46 +6,22 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 13:10:55 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/26 19:15:09 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/27 10:14:09 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-static t_cachtay gen_cache(float (*func)(float))
+float sin_deg(float deg)
 {
-	size_t i;
-	t_cachtay cach;
-	float x;
+	const float pi_over_180 = (float)(M_PI / 180.0);
 
-	i = 0;
-	while (i < CACHTAY_SIZE)
-	{
-		x = ft_lmapf((long)(i + 1), 1, (long)CACHTAY_SIZE, 0, (float)(2*M_PI));
-		cach.e[i] = func(x);
-		i++;
-	}
-	return (cach);
+	return (sinf(deg * pi_over_180));
 }
 
-float fast_sin(float deg)
+float cos_deg(float deg)
 {
-	static t_cachtay cach = {{999.0}};
-	size_t index;
+	const float pi_over_180 = (float)(M_PI / 180.0);
 
-	if (cach.e[0] >= 900)
-		cach = gen_cache(sinf);
-	index = (size_t)ft_fmapl(fmodf(ABS(deg), 360.0), 0, 359, 0, CACHTAY_SIZE-1);
-	return (cach.e[index]);
-}
-
-float fast_cos(float deg)
-{
-	static t_cachtay cach = {{999.0}};
-	size_t index;
-
-	if (cach.e[0] >= 900)
-		cach = gen_cache(cosf);
-	index = (size_t)ft_fmapl(fmodf(ABS(deg), 360.0), 0, 359, 0, CACHTAY_SIZE-1);
-	return (cach.e[index]);
+	return (cosf(deg * pi_over_180));
 }
