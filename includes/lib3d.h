@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/27 22:11:18 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/28 20:38:24 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,6 @@ typedef struct	s_p3d
 	float		y;
 	float		z;
 }				t_p3d;
-
-/*
-** 3D point with direction (AKA a vector)
-*/
-typedef struct	s_v3d
-{
-	t_p3d		pos;
-	t_p3d		rot;
-}				t_v3d;
 
 /*
 ** A transformation matrix
@@ -89,7 +80,7 @@ t_p3d			p3d_transform(const t_p3d src, const t_mat m);
 ** Creates a matrix that translates/rotates by the negative position/angle
 ** of the specified vector
 */
-void			mat_from_v3d(t_mat mat_cam, const t_v3d src);
+void			mat_from_v3d(t_mat mat_cam, const t_p3d pos, const t_p3d rot);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
