@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/28 20:38:24 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/30 19:42:31 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,10 +84,10 @@ void			mat_from_v3d(t_mat mat_cam, const t_p3d pos, const t_p3d rot);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
-** Returns 1 if the point is visible, 0 otherwise
+** The (x, y) of the returned point are screen coordinates while the z is the
+** depth of the point (if depth <= 0, then the point is behind the camera)
 */
-int				p3d_project(t_p2d *p_raster, t_p2d r_size, t_p2d c_size,
-							t_p3d p_world, const t_mat mat_cam);
+t_p3d	p3d_project(t_p2d r_size, t_p3d p_world, const t_mat mat_cam);
 
 /*
 ** Applies a translation to a matrix
@@ -102,7 +102,7 @@ void			mat_scale(t_mat dest, float x, float y, float z);
 /*
 ** Constructs a camera matrix from a camera position and a point
 */
-void			mat_look_at(t_mat dest, t_p3d from, t_p3d to);
+void			mat_look_at(t_mat dest, t_p3d eye, t_p3d center, t_p3d up);
 
 /*
 ** Applies a (x, y, z) rotation to a matrix
