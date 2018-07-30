@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/30 19:42:31 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/07/30 20:51:19 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,10 @@ void			mat_from_v3d(t_mat mat_cam, const t_p3d pos, const t_p3d rot);
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
 ** The (x, y) of the returned point are screen coordinates while the z is the
 ** depth of the point (if depth <= 0, then the point is behind the camera)
+** If distance is 0, then a perspective projection is used, else orthographic
 */
-t_p3d	p3d_project(t_p2d r_size, t_p3d p_world, const t_mat mat_cam);
+t_p3d	p3d_project(float distance, t_p2d r_size, t_p3d p_world,
+						const t_mat mat_cam);
 
 /*
 ** Applies a translation to a matrix
