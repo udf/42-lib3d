@@ -6,11 +6,11 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/08/02 14:06:47 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/08/02 14:19:57 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = fast_trig map \
+SRCS = fast_trig rmap \
 mat_copy mat_mult \
 mat_set_identity mat_set_row \
 mat_translate mat_scale mat_rotate \
