@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/02 14:04:02 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:09:47 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ long			ft_fmapl(float n, float s1, float e1, long s2, long e2);
 ** Matrix stuff
 */
 void			mat_copy(t_mat dest, const t_mat src);
-void			mat_set_row(float dest[4], float a, float b, float c, float d);
+void			mat_set_row(float dest[4], float data[4]);
 
 /*
 ** Sets a matrix to an identity matrix (aka a "blank" matrix)
@@ -75,12 +75,6 @@ void			mat_mult(const t_mat m1, const t_mat m2, t_mat dest);
 ** Transforms a 3d point using a matrix
 */
 t_p3d			p3d_transform(const t_p3d src, const t_mat m);
-
-/*
-** Creates a matrix that translates/rotates by the negative position/angle
-** of the specified vector
-*/
-void			mat_from_v3d(t_mat mat_cam, const t_p3d pos, const t_p3d rot);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)

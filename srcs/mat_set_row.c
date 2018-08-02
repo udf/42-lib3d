@@ -6,16 +6,16 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/02 14:00:30 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:09:54 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void	mat_set_row(float dest[4], float a, float b, float c, float d)
+void	mat_set_row(float dest[4], float data[4])
 {
-	dest[0] = a;
-	dest[1] = b;
-	dest[2] = c;
-	dest[3] = d;
+	dest[0] = data[0];
+	dest[1] = data[1];
+	dest[2] = data[2];
+	dest[3] = data[3];
 }

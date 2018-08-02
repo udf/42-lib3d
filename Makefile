@@ -6,7 +6,7 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/08/02 13:58:42 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/08/02 14:06:47 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS = fast_trig map \
 mat_copy mat_mult \
 mat_set_identity mat_set_row \
 mat_translate mat_scale mat_rotate \
-mat_from_v3d mat_look_at mat_inverse \
+mat_look_at mat_inverse \
 p3d_math p3d_transform p3d_project
 
 NAME=lib3d.a
