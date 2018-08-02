@@ -6,7 +6,7 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/07/27 22:10:10 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/08/02 13:58:42 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,7 @@ NAME=lib3d.a
 INCLUDES=lib3d.h
 HEADERS=$(INCLUDES:%=includes/%)
 OBJS=$(SRCS:=.o)
-
-TEST_SRCS=$(wildcard tests/t_*.c)
-TEST_BINS=$(TEST_SRCS:tests/%.c=tests/bin/%)
-
-CFLAGS=-Wall -Wextra -Werror -Wconversion
+CFLAGS=-Wall -Wextra -Werror -Wconversion -Ofast
 
 all: $(NAME)
 
@@ -40,11 +36,5 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
-
-tests: $(TEST_BINS)
-
-$(TEST_BINS): $(NAME) $(TEST_SRCS)
-	mkdir -p ./tests/bin
-	gcc -I includes -Ofast -o $@ $(@:tests/bin/%=tests/%.c) -L . -l3d -lm
 
 re: fclean all

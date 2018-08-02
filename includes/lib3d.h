@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/30 20:51:19 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:04:02 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void			mat_from_v3d(t_mat mat_cam, const t_p3d pos, const t_p3d rot);
 ** depth of the point (if depth <= 0, then the point is behind the camera)
 ** If distance is 0, then a perspective projection is used, else orthographic
 */
-t_p3d	p3d_project(float distance, t_p2d r_size, t_p3d p_world,
+t_p3d			p3d_project(float distance, t_p2d r_size, t_p3d p_world,
 						const t_mat mat_cam);
 
 /*
@@ -112,7 +112,6 @@ void			mat_look_at(t_mat dest, t_p3d eye, t_p3d center, t_p3d up);
 void			mat_rotate_x(t_mat dest, float x);
 void			mat_rotate_y(t_mat dest, float y);
 void			mat_rotate_z(t_mat dest, float z);
-void			mat_rotate_xyz(t_mat dest, float x, float y, float z);
 
 /*
 ** Inverts a matrix
@@ -127,16 +126,15 @@ void			mat_rotate_xyz(t_mat dest, float x, float y, float z);
 ** [  uz   vz   wz  0]
 ** [-u.t -v.t -w.t  1]
 */
-void	mat_inverse(t_mat inv, const t_mat src);
+void			mat_inverse(t_mat inv, const t_mat src);
 
 /*
 ** Various math functions for 3d points
 */
-t_p3d		p3d_add(t_p3d a, t_p3d b);
-t_p3d		p3d_sub(t_p3d a, t_p3d b);
-t_p3d		p3d_norm(t_p3d a);
-t_p3d		p3d_cross(t_p3d a, t_p3d b);
-float		p3d_dot(t_p3d a, t_p3d b);
+t_p3d			p3d_add(t_p3d a, t_p3d b);
+t_p3d			p3d_sub(t_p3d a, t_p3d b);
+t_p3d			p3d_norm(t_p3d a);
+t_p3d			p3d_cross(t_p3d a, t_p3d b);
+float			p3d_dot(t_p3d a, t_p3d b);
 
 #endif
-

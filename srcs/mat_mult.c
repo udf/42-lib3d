@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_mat_mult.c                                     :+:      :+:    :+:   */
+/*   mat_mult.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 11:35:53 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:00:22 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_mult(const t_mat m1, const t_mat m2, t_mat dest)
+void	mat_mult(const t_mat m1, const t_mat m2, t_mat dest)
 {
 	size_t i;
 	size_t j;

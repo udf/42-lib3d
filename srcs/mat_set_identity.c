@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_mat_set_identity.c                             :+:      :+:    :+:   */
+/*   mat_set_identity.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 11:29:02 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:04:39 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_set_identity(t_mat m)
+void	mat_set_identity(t_mat m)
 {
 	mat_set_row(m[0], 1, 0, 0, 0);
 	mat_set_row(m[1], 0, 1, 0, 0);

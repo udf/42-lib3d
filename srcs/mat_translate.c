@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_mat_translate.c                                :+:      :+:    :+:   */
+/*   mat_translate.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 12:24:06 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:04:19 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_translate(t_mat dest, float x, float y, float z)
+void	mat_translate(t_mat dest, float x, float y, float z)
 {
 	t_mat m_trans;
 	t_mat tmp;

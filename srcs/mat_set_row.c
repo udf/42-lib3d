@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_mat_set_row.c                                  :+:      :+:    :+:   */
+/*   mat_set_row.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 11:18:19 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 14:00:30 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_set_row(float dest[4], float a, float b, float c, float d)
+void	mat_set_row(float dest[4], float a, float b, float c, float d)
 {
 	dest[0] = a;
 	dest[1] = b;

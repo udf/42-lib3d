@@ -6,13 +6,13 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 14:37:10 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 13:59:09 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_copy(t_mat dest, const t_mat src)
+void	mat_copy(t_mat dest, const t_mat src)
 {
 	size_t i;
 	size_t j;

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   l3d_mat_scale.c                                    :+:      :+:    :+:   */
+/*   mat_scale.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 10:57:56 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/07/25 12:20:55 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/02 13:59:16 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib3d.h"
 
-void mat_scale(t_mat dest, float x, float y, float z)
+void	mat_scale(t_mat dest, float x, float y, float z)
 {
 	t_mat m_trans;
 	t_mat tmp;
