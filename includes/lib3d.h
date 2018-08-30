@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/02 14:19:45 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/06 12:27:32 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,6 @@ typedef struct	s_p3d
 }				t_p3d;
 
 /*
-** floating point/long ranges
-*/
-typedef struct	s_frange
-{
-	float		s;
-	float		e;
-}				t_frange;
-
-typedef struct	s_lrange
-{
-	long		s;
-	long		e;
-}				t_lrange;
-
-/*
 ** A transformation matrix
 ** (it's actually just a float*)
 */
@@ -61,14 +46,6 @@ typedef float	t_mat[4][4];
 
 float			sin_deg(float deg);
 float			cos_deg(float deg);
-
-/*
-** Maps a value from one range to another
-*/
-float			ft_fmapf(float n, t_frange r1, t_frange r2);
-long			ft_lmapl(long n, t_lrange r1, t_lrange r2);
-float			ft_lmapf(long n, t_lrange r1, t_frange r2);
-long			ft_fmapl(float n, t_frange r1, t_lrange r2);
 
 /*
 ** Matrix stuff
