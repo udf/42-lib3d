@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 13:10:55 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/02 14:01:48 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/30 15:12:02 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,11 @@ float	cos_deg(float deg)
 	const float pi_over_180 = (float)(M_PI / 180.0);
 
 	return (cosf(deg * pi_over_180));
+}
+
+float	tan_deg(float deg)
+{
+	const float pi_over_180 = (float)(M_PI / 180.0);
+
+	return (tanf(deg * pi_over_180));
 }

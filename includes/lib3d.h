@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/06 12:27:32 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/30 15:13:47 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ typedef float	t_mat[4][4];
 
 float			sin_deg(float deg);
 float			cos_deg(float deg);
+float			tan_deg(float deg);
 
 /*
 ** Matrix stuff
@@ -67,6 +68,11 @@ void			mat_mult(const t_mat m1, const t_mat m2, t_mat dest);
 ** Transforms a 3d point using a matrix
 */
 t_p3d			p3d_transform(const t_p3d src, const t_mat m);
+
+/*
+** Transforms a 3d vector (trans for vectors doesnt matter) using a matrix
+*/
+t_p3d			mat_vec_mult(const t_p3d src, const t_mat m);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
