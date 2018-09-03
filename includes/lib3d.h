@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/09/03 17:22:20 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/09/03 20:32:38 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,18 @@
 
 # ifndef ABS
 #  define ABS(x) ((x < 0) ? -(x) : (x))
+# endif
+
+# ifndef MIN
+#  define MIN(x, y) ((x < y) ? (x) : (y))
+# endif
+
+# ifndef MAX
+#  define MAX(x, y) ((x > y) ? (x) : (y))
+# endif
+
+# ifndef CLAMP
+#  define CLAMP(i, low, high) (MAX(MIN(i, high), low))
 # endif
 
 /*
@@ -128,11 +140,13 @@ void			mat_inverse(t_mat inv, const t_mat src);
 /*
 ** Various math functions for 3d points
 */
-t_p3d			p3d_mult(t_p3d a, float s);
 t_p3d			p3d_add(t_p3d a, t_p3d b);
 t_p3d			p3d_sub(t_p3d a, t_p3d b);
 t_p3d			p3d_norm(t_p3d a);
 t_p3d			p3d_cross(t_p3d a, t_p3d b);
 float			p3d_dot(t_p3d a, t_p3d b);
+
+t_p3d			p3d_mult(t_p3d a, float s);
+t_p3d			p3d_clip(t_p3d p, float min, float max);
 
 #endif
