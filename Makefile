@@ -6,7 +6,7 @@
 #    By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 07:39:20 by mhoosen           #+#    #+#              #
-#    Updated: 2018/08/30 23:58:25 by mhoosen          ###   ########.fr        #
+#    Updated: 2018/09/03 17:21:28 by mhoosen          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ mat_copy mat_mult \
 mat_set_identity mat_set_row \
 mat_translate mat_scale mat_rotate \
 mat_look_at mat_inverse mat_vec_mult mat_dir_mult \
-p3d_math p3d_transform p3d_project
+p3d_math p3d_math2 p3d_transform p3d_project
 
 NAME=lib3d.a
 INCLUDES=lib3d.h

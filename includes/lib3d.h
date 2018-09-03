@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/31 00:00:25 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/09/03 17:22:20 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ void			mat_inverse(t_mat inv, const t_mat src);
 /*
 ** Various math functions for 3d points
 */
+t_p3d			p3d_mult(t_p3d a, float s);
 t_p3d			p3d_add(t_p3d a, t_p3d b);
 t_p3d			p3d_sub(t_p3d a, t_p3d b);
 t_p3d			p3d_norm(t_p3d a);
