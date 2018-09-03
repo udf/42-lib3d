@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/08/30 15:13:47 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/08/31 00:00:25 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,14 @@ void			mat_mult(const t_mat m1, const t_mat m2, t_mat dest);
 t_p3d			p3d_transform(const t_p3d src, const t_mat m);
 
 /*
-** Transforms a 3d vector (trans for vectors doesnt matter) using a matrix
+** Transforms a 3d vector (converts homogeneous to Cartesian) using a matrix
 */
 t_p3d			mat_vec_mult(const t_p3d src, const t_mat m);
+
+/*
+** Transforms a 3d direction (doesn't account for translation) using a matrix
+*/
+t_p3d			mat_dir_mult(const t_p3d src, const t_mat m);
 
 /*
 ** Projects a 3d point using a camera matrix (use mat_from_v3d to get one)
