@@ -6,7 +6,7 @@
 /*   By: mhoosen <mhoosen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/25 08:32:29 by mhoosen           #+#    #+#             */
-/*   Updated: 2018/09/03 20:32:38 by mhoosen          ###   ########.fr       */
+/*   Updated: 2018/09/04 21:40:04 by mhoosen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,5 +148,6 @@ float			p3d_dot(t_p3d a, t_p3d b);
 
 t_p3d			p3d_mult(t_p3d a, float s);
 t_p3d			p3d_clip(t_p3d p, float min, float max);
+t_p3d			p3d_elem_mult(t_p3d a, t_p3d b);
 
 #endif
