@@ -149,5 +149,7 @@ float			p3d_dot(t_p3d a, t_p3d b);
 t_p3d			p3d_mult(t_p3d a, float s);
 t_p3d			p3d_clip(t_p3d p, float min, float max);
 t_p3d			p3d_elem_mult(t_p3d a, t_p3d b);
+float			p3d_mag(t_p3d p);
+float			p3d_mag_norm(t_p3d *p);
 
 #endif

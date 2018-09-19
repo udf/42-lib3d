@@ -24,7 +24,7 @@ t_p3d		p3d_sub(t_p3d a, t_p3d b)
 
 t_p3d		p3d_norm(t_p3d a)
 {
-	const float mag = sqrtf(a.x * a.x + a.y * a.y + a.z * a.z);
+	const float mag = p3d_mag(a);
 
 	if (fpclassify(mag) == FP_ZERO)
 		return (t_p3d){0, 0, 0};

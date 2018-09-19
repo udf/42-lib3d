@@ -29,3 +29,19 @@ t_p3d		p3d_clip(t_p3d p, float min, float max)
 	p.z = CLAMP(p.z, min, max);
 	return (p);
 }
+
+float		p3d_mag(t_p3d p)
+{
+	return (sqrtf(p.x * p.x + p.y * p.y + p.z * p.z));
+}
+
+float		p3d_mag_norm(t_p3d *p)
+{
+	const float mag = p3d_mag(*p);
+
+	if (fpclassify(mag) == FP_ZERO)
+		*p = (t_p3d){0, 0, 0};
+	else
+		*p = (t_p3d){p->x / mag, p->y / mag, p->z / mag};
+	return (mag);
+}
